@@ -2,7 +2,6 @@ package com.example.simplefood.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +11,8 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.example.simplefood.CategoryMealsActivity
-import com.example.simplefood.MealActivity
+import com.example.simplefood.activities.CategoryMealsActivity
+import com.example.simplefood.activities.MealActivity
 import com.example.simplefood.adapters.CategoriesAdapter
 import com.example.simplefood.adapters.MostPopularAdapter
 import com.example.simplefood.databinding.FragmentHomeBinding
@@ -73,7 +72,7 @@ class HomeFragment : Fragment() {
 
     private fun onCategoryClick() {
         categoriesAdapter.onItemClick = { category->
-            val intent =Intent(activity,CategoryMealsActivity::class.java)
+            val intent =Intent(activity, CategoryMealsActivity::class.java)
             intent.putExtra(CATEGORY_NAME,category.strCategory)
             startActivity(intent)
 
@@ -97,7 +96,7 @@ class HomeFragment : Fragment() {
 
     private fun popularItemClick() {
         popularItemsAdapter.onItemClick = {meal->
-            val intent = Intent(activity,MealActivity::class.java)
+            val intent = Intent(activity, MealActivity::class.java)
             intent.putExtra(MEAL_ID,meal.idMeal)
             intent.putExtra(MEAL_NAME,meal.strMeal)
             intent.putExtra(MEAL_THUMB,meal.strMealThumb)
@@ -121,7 +120,7 @@ class HomeFragment : Fragment() {
 
     private fun onRandomMealClick() {
         binding.randomMealCard.setOnClickListener{
-            val intent = Intent(activity,MealActivity::class.java)
+            val intent = Intent(activity, MealActivity::class.java)
             intent.putExtra(MEAL_ID,randomMeal.idMeal)
             intent.putExtra(MEAL_NAME,randomMeal.strMeal)
             intent.putExtra(MEAL_THUMB,randomMeal.strMealThumb)

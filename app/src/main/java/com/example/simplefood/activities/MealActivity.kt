@@ -1,4 +1,4 @@
-package com.example.simplefood
+package com.example.simplefood.activities
 
 import android.content.Intent
 import android.net.Uri
@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
+import com.example.simplefood.R
 import com.example.simplefood.databinding.ActivityMealBinding
 import com.example.simplefood.fragments.HomeFragment
 import com.example.simplefood.model.Meal
@@ -51,7 +51,7 @@ class MealActivity : AppCompatActivity() {
                 binding.tvCategory.text = "Category : ${meal!!.strCategory}"
                 binding.tvArea.text = "Area : ${meal.strArea}"
                 binding.tvInstructionsDetails.text = meal.strInstructions
-                ytLink = meal.strYoutube
+                ytLink = meal.strYoutube!!
             }
 
         })
