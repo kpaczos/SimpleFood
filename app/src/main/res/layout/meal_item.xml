@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/_15ssp"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:text="test"
             app:layout_constraintStart_toStartOf="@id/img_meal"
             app:layout_constraintEnd_toEndOf="@id/img_meal"

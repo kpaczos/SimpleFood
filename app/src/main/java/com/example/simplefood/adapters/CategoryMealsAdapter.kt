@@ -10,15 +10,13 @@ import com.example.simplefood.model.MealByCategory
 import java.util.ArrayList
 
 class CategoryMealsAdapter:RecyclerView.Adapter<CategoryMealsAdapter.CategoryMealsViewHolder>() {
-    inner class CategoryMealsViewHolder(val binding: MealItemBinding):RecyclerView.ViewHolder(binding.root) {
-
-    }
+    inner class CategoryMealsViewHolder(val binding: MealItemBinding):RecyclerView.ViewHolder(binding.root)
 
     private var mealsList = ArrayList<MealByCategory>()
 
     fun setMealsList(mealsList:List<MealByCategory>){
         this.mealsList = mealsList as ArrayList<MealByCategory>
-
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryMealsViewHolder {
