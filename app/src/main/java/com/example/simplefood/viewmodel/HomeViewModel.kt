@@ -4,9 +4,11 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.simplefood.db.MealDatabase
 import com.example.simplefood.model.*
 import com.example.simplefood.retrofit.RetrofitInstance
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -80,5 +82,14 @@ class HomeViewModel(
 
     fun observeFavoritesMealsLivedata():LiveData<List<Meal>>{
         return favoritesMealLiveData
+    }
+    fun deleteMeal(meal:Meal){
+        viewModelScope.launch {
+            mealDatabase.mealDao().deleteMeal(meal)
+        }}
+    fun insertMeal(meal:Meal){
+        viewModelScope.launch {
+            mealDatabase.mealDao().update(meal)
+        }
     }
 }
