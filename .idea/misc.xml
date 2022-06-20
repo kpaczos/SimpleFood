@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Acer/Desktop/Android/SimpleFood/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/Acer/Desktop/Android/SimpleFood/app/src/main/res/drawable/ic_click_favorite.xml" value="0.2703125" />
+        <entry key="..\:/Users/Acer/Desktop/Android/SimpleFood/app/src/main/res/drawable/ic_favorite.xml" value="0.2703125" />
+        <entry key="..\:/Users/Acer/Desktop/Android/SimpleFood/app/src/main/res/drawable/ic_icon.xml" value="0.2703125" />
+        <entry key="..\:/Users/Acer/Desktop/Android/SimpleFood/app/src/main/res/drawable/ic_yt.xml" value="0.2703125" />
         <entry key="..\:/Users/Acer/Desktop/Android/SimpleFood/app/src/main/res/font/fonts.xml" value="0.284375" />
         <entry key="..\:/Users/Acer/Desktop/Android/SimpleFood/app/src/main/res/layout/activity_category_meals.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Acer/Desktop/Android/SimpleFood/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
