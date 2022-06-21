@@ -110,4 +110,6 @@ class HomeViewModel(
             mealDatabase.mealDao().update(meal)
         }
     }
+
+    fun observeBottomSheetMeal():LiveData<Meal> = bottomSheetMealLiveData
 }

@@ -6,9 +6,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.simplefood.databinding.PopularItemsBinding
 import com.example.simplefood.model.MealByCategory
+import com.example.simplefood.model.MealsByCategoryList
 
 class MostPopularAdapter():RecyclerView.Adapter<MostPopularAdapter.PopularMealViewHolder>() {
     lateinit var onItemClick:((MealByCategory)->Unit)
+    var onLongItemClick:((MealByCategory)->Unit)?=null
     private var mealsList = ArrayList<MealByCategory>()
 
     fun setMeals(mealsList: ArrayList<MealByCategory>){
@@ -28,6 +30,10 @@ class MostPopularAdapter():RecyclerView.Adapter<MostPopularAdapter.PopularMealVi
             .into(holder.binding.imgPopularItem)
         holder.itemView.setOnClickListener {
             onItemClick.invoke(mealsList[position])
+        }
+        holder.itemView.setOnLongClickListener {
+            onLongItemClick?.invoke(mealsList[position])
+            true
         }
     }
 
