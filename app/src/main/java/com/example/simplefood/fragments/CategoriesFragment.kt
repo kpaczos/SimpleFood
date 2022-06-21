@@ -40,7 +40,10 @@ class CategoriesFragment : Fragment() {
 
         prepareRecyclerView()
         observeCategories()
+
     }
+
+
 
     private fun observeCategories() {
         viewModel.observeCategoriesLiveData().observe(viewLifecycleOwner, Observer { categories ->
